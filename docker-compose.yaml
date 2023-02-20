@@ -10,6 +10,7 @@ services:
       - main
     volumes:
       - ./app:/app/linksnatch
+    restart: always
 
 networks:
   main:
