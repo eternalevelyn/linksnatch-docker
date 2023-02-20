@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  linksnatch:
+    image: linksnatch:latest
+    container_name: linksnatch
+    ports:
+      - 3000:3000
+    networks:
+      - main
+    volumes:
+      - ./app:/app/linksnatch
+
+networks:
+  main:
