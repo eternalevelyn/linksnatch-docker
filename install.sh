@@ -1,2 +1,2 @@
-docker build -q . -t linksnatch:latest
+docker build . -t linksnatch:latest
 docker-compose up -d
