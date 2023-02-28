@@ -1,7 +1,7 @@
 FROM ubuntu
 COPY . /
 RUN mkdir app
-RUN apt-get -q update && apt-get -q install git
+RUN apt-get -qq -y update && apt-get -qq -y install git
 WORKDIR /app
 RUN git clone https://github.com/amitmerchant1990/linksnatch
 WORKDIR /app/linksnatch
