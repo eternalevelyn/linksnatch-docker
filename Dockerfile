@@ -8,4 +8,5 @@ WORKDIR /app/linksnatch
 RUN npm install
 RUN touch entrypoint.sh
 RUN echo "cd /app/linksnatch && npm run dev" > entrypoint.sh
+EXPOSE 3000
 ENTRYPOINT ["/app/linksnatch/entrypoint.sh"]
