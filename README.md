@@ -13,7 +13,7 @@ This is a bit more complicated. This would be the manual install path, if the pr
 
 Running the prebuilt image:
 
-```docker-compose --file docker-compose-prebuilt.yml up -d```
+```docker-compose --file docker-compose-prebuilt.yaml up -d```
 
 Building the image locally:
 ```
