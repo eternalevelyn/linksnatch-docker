@@ -1,8 +1,11 @@
-FROM ubuntu
-COPY . /
+FROM node:buster
 RUN mkdir app
-RUN git clone https://github.com/amitmerchant1990/linksnatch -o /app/linksnatch
-RUN cd /app/linksnatch && npm install
+RUN apt-get -qq -y update && apt-get -qq -y install git
+WORKDIR /app
+RUN git clone https://github.com/amitmerchant1990/linksnatch
+WORKDIR /app/linksnatch
+RUN npm install
 RUN touch entrypoint.sh
-RUN echo "npm run dev" > entrypoint.sh
+RUN echo "cd /app/linksnatch && npm run dev" > entrypoint.sh
+EXPOSE 3000
 ENTRYPOINT ["/app/linksnatch/entrypoint.sh"]

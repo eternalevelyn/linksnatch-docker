@@ -11,6 +11,11 @@ or
 ## Manual installation
 This is a bit more complicated. This would be the manual install path, if the previous scripts didn't work.
 
+Running the prebuilt image:
+
+```docker-compose --file docker-compose-prebuilt.yml up -d```
+
+Building the image locally:
 ```
 docker build . -t linksnatch:latest # this builds the container image from scratch
 docker-compose up -d # this runs the container
