@@ -1,5 +1,4 @@
 FROM node:buster
-COPY . /
 RUN mkdir app
 RUN apt-get -qq -y update && apt-get -qq -y install git
 WORKDIR /app
