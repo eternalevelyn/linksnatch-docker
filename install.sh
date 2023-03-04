@@ -1,2 +1,2 @@
 docker build . -t linksnatch:latest
-docker-compose up -d
+docker-compose --file docker-compose-prebuilt.yaml up -d
